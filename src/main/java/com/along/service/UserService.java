@@ -1,7 +1,7 @@
-package cn.no7player.service;
+package com.along.service;
 
-import cn.no7player.mapper.UserMapper;
-import cn.no7player.model.User;
+import com.along.mapper.UserMapper;
+import com.along.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +19,11 @@ public class UserService {
         User user=userMapper.findUserInfo();
         //User user=null;
         return user;
+    }
+
+
+    public Integer addUser(User user){
+        return userMapper.insertUser(user);
     }
 
 }
