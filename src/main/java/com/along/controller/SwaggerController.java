@@ -1,6 +1,6 @@
-package cn.no7player.controller;
+package com.along.controller;
 
-import cn.no7player.model.User;
+import com.along.model.User;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

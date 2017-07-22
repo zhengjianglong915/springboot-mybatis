@@ -1,7 +1,7 @@
-package cn.no7player.controller;
+package com.along.controller;
 
-import cn.no7player.model.User;
-import cn.no7player.service.UserService;
+import com.along.model.User;
+import com.along.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class UserController {
-
     private Logger logger = Logger.getLogger(UserController.class);
 
     @Autowired
@@ -28,5 +27,12 @@ public class UserController {
             logger.info("user.getAge():"+user.getAge());
         }
         return user;
+    }
+
+    @RequestMapping("/addUser")
+    @ResponseBody
+    public Integer insert(User user) {
+        Integer result = userService.addUser(user);
+        return result;
     }
 }
